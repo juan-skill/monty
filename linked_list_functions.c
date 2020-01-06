@@ -38,15 +38,17 @@ void free_stack(stack_t **head)
 {
 	stack_t *current;
 
- 	if (head == NULL)
+	if (head == NULL)
 		return;
- 	free(handle.input);
- 	fclose(handle.file);
- 	while (*head != NULL)
+
+	free(handle.input);
+	fclose(handle.file);
+
+	while (*head != NULL)
 	{
 		current = (*head)->next;
 		free(*head);
- 		*head = current;
+		*head = current;
 	}
 }
 
