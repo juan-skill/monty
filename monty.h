@@ -45,7 +45,7 @@ typedef struct instruction_s
 
 
 /**
- * struct struct_glo - handle global variable
+ * struct var_glo - handle global variable
  * @file: file descripter input file
  * @arg_num: numerical arguments
  * @input: input string
