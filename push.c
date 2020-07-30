@@ -16,7 +16,7 @@ void push(stack_t **head, unsigned int nth_command)
 
 	if (isnum(str) == 0)
 	{
-		printf("L%u: usage: push integer\n", nth_command);
+		fprintf(stderr, "L%u: usage: push integer\n", nth_command);
 		free_stack(head);
 		exit(EXIT_FAILURE);
 	}
@@ -28,7 +28,7 @@ void push(stack_t **head, unsigned int nth_command)
 
 	if (node == NULL)
 	{
-		printf("Error: malloc failed\n");
+		fprintf(stderr, "Error: malloc failed\n");
 		free_stack(head);
 		exit(EXIT_FAILURE);
 	}
@@ -49,7 +49,7 @@ void pop(stack_t **head, unsigned int nth_command)
 
 	if (node == NULL)
 	{
-		printf("L%u: can't pop an empty stack\n", nth_command);
+		fprintf(stderr, "L%u: can't pop an empty stack\n", nth_command);
 		free_stack(head);
 		exit(EXIT_FAILURE);
 	}

@@ -31,7 +31,7 @@ void pint(stack_t **head, unsigned int line_num)
 {
 	if (head == NULL || *head == NULL)
 	{
-		printf("L%d: can't pint, stack empty\n", line_num);
+		fprintf(stderr, "L%d: can't pint, stack empty\n", line_num);
 		exit(EXIT_FAILURE);
 	}
 	printf("%d\n", (*head)->n);
