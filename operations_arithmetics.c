@@ -83,3 +83,29 @@ void _div(stack_t **head, unsigned int line_num)
 	(*head) = tmp;
 	tmp = NULL;
 }
+
+
+/**
+ * mul - multiplicating first two elements
+ *
+ * @head: input stack address
+ * @line_num: current line number
+ * Return: void
+ */
+void mul(stack_t **head, unsigned int line_num)
+{
+	stack_t *tmp = NULL;
+
+	if ((*head) == NULL || (*head)->next == NULL)
+	{
+		fprintf(stderr, "L%d: can't div, stack too short\n", line_num);
+		free_stack(head);
+		exit(EXIT_FAILURE);
+	}
+
+	tmp = (*head)->next;
+	tmp->n *= (*head)->n;
+	pop(head, line_num);
+	(*head) = tmp;
+	tmp = NULL;
+}
