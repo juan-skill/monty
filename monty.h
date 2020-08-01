@@ -93,6 +93,7 @@ void nop(stack_t **stack, unsigned int line_num);
 
 /* char and string */
 void pchar(stack_t **stack, unsigned int line_num);
+void pstr(stack_t **stack, unsigned int line_num);
 
 /* other functions */
 int isnum(char *number);

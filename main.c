@@ -71,7 +71,7 @@ void opcode(char *command, unsigned int line_num, stack_t **head)
 		{"nop", nop}, {"sub", sub},
 		{"div", _div}, {"mul", mul},
 		{"mod", mod}, {"pchar", pchar},
-		{NULL, NULL}
+		{"pstr", pstr}, {NULL, NULL}
 	};
 
 	if (strpbrk(command, "#"))
